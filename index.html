@@ -1,1 +1,667 @@
-<h1> Hello from Khushi</h1>
+<!-- <h1> Hello from Khushi</h1> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Singh | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f1a;
+            color: #ffffff;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 26, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a78bfa;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background:
+                radial-gradient(circle at top left, #312e81, transparent 35%),
+                radial-gradient(circle at bottom right, #581c87, transparent 35%),
+                #0f0f1a;
+        }
+
+        .profile {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            color: #c4b5fd;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #b8b8c7;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            margin: 5px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            background: #7c3aed;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #8b5cf6;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #8b5cf6;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #9999aa;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: #181827;
+            border: 1px solid #292940;
+        }
+
+        .about-card h3 {
+            color: #a78bfa;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #b8b8c7;
+            line-height: 1.8;
+        }
+
+        .info p {
+            margin-bottom: 15px;
+        }
+
+        .info strong {
+            color: white;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: #131320;
+        }
+
+        .skill-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+            background: #1b1b2c;
+            border: 1px solid #292940;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-7px);
+            border-color: #8b5cf6;
+        }
+
+        .skill h3 {
+            color: #c4b5fd;
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: #9999aa;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+
+        .project-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            padding: 30px;
+            border-radius: 20px;
+            background: #181827;
+            border: 1px solid #292940;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #8b5cf6;
+        }
+
+        .project h3 {
+            color: #c4b5fd;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #a5a5b5;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 20px;
+            font-size: 12px;
+            background: #292044;
+            color: #c4b5fd;
+        }
+
+        /* EDUCATION */
+
+        .education {
+            background: #131320;
+        }
+
+        .education-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 35px;
+            border-left: 4px solid #8b5cf6;
+            border-radius: 15px;
+            background: #1b1b2c;
+        }
+
+        .education-box h3 {
+            color: #c4b5fd;
+            margin-bottom: 8px;
+        }
+
+        .education-box p {
+            color: #a5a5b5;
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            color: #aaaaba;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #090910;
+            color: #777788;
+        }
+
+        footer span {
+            color: #a78bfa;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .skill-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">Khushi.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <div class="profile">
+                KS
+            </div>
+
+            <h1>Hi, I'm <span>Khushi</span></h1>
+
+            <h2>B.Tech IT Student & Aspiring Developer</h2>
+
+            <p>
+                I'm an Information Technology student passionate about
+                web development, backend development, Python and
+                machine learning. I love learning new technologies
+                and turning ideas into practical projects.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="title">
+            <h2>About Me</h2>
+            <p>Get to know me</p>
+        </div>
+
+        <div class="about">
+
+            <div class="about-card">
+
+                <h3>Who Am I?</h3>
+
+                <p>
+                    I'm Khushi, a B.Tech Information Technology student
+                    who enjoys exploring software development and
+                    technology. I believe in learning by building
+                    real-world projects and continuously improving
+                    my skills.
+                </p>
+
+            </div>
+
+            <div class="about-card info">
+
+                <h3>Quick Information</h3>
+
+                <p><strong>🎓 Course:</strong> B.Tech IT</p>
+
+                <p><strong>💻 Focus:</strong> Full Stack Development</p>
+
+                <p><strong>🐍 Programming:</strong> Python, JavaScript</p>
+
+                <p><strong>🌐 Technologies:</strong> React, Django</p>
+
+                <p><strong>🗄️ Database:</strong> SQL</p>
+
+                <p><strong>📍 Location:</strong> Mumbai, India</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <div class="title">
+            <h2>My Skills</h2>
+            <p>Technologies I work with</p>
+        </div>
+
+        <div class="skill-grid">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Web Development</p>
+            </div>
+
+            <div class="skill">
+                <h3>React.js</h3>
+                <p>Frontend Development</p>
+            </div>
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>Django</h3>
+                <p>Backend Development</p>
+            </div>
+
+            <div class="skill">
+                <h3>SQL</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <p>ML Fundamentals</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="title">
+            <h2>My Projects</h2>
+            <p>Things I have built and explored</p>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project">
+
+                <h3>Smart Price Tracker</h3>
+
+                <p>
+                    A Python and Streamlit application for tracking
+                    product prices and comparing prices across
+                    shopping platforms.
+                </p>
+
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">ML</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>R&D Portal</h3>
+
+                <p>
+                    A student research portal designed to help students
+                    explore research projects and develop new ideas.
+                </p>
+
+                <span class="tag">React</span>
+                <span class="tag">Django</span>
+                <span class="tag">DRF</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Car Rental Management</h3>
+
+                <p>
+                    A DBMS project designed to manage customers, cars,
+                    rentals, payments, employees, insurance and
+                    maintenance.
+                </p>
+
+                <span class="tag">SQL</span>
+                <span class="tag">DBMS</span>
+                <span class="tag">SSMS</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="education" id="education">
+
+        <div class="title">
+            <h2>Education</h2>
+            <p>My academic journey</p>
+        </div>
+
+        <div class="education-box">
+
+            <h3>B.Tech in Information Technology</h3>
+
+            <p>
+                Currently pursuing Bachelor of Technology in
+                Information Technology.
+            </p>
+
+            <h3>Diploma in Computer Engineering</h3>
+
+            <p>
+                Completed Diploma in Computer Engineering with
+                experience in programming, databases and software
+                development.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="title">
+            <h2>Let's Connect</h2>
+            <p>Have an idea or want to collaborate?</p>
+        </div>
+
+        <div class="contact-content">
+
+            <p>
+                I'm always interested in learning new technologies,
+                building projects and collaborating with other
+                developers and students.
+            </p>
+
+            <a href="mailto:yourmail@gmail.com" class="btn">
+                Email Me
+            </a>
+
+            <a href="https://github.com/" class="btn btn-outline">
+                GitHub
+            </a>
+
+            <a href="https://linkedin.com/" class="btn btn-outline">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 <span>Khushi Singh</span> | Built with HTML & CSS
+    </footer>
+
+</body>
+</html>
